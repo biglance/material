@@ -1,0 +1,33 @@
+:host * {
+  transition: all 500ms ease-in-out;
+}
+
+.mat-sidenav-container {
+  height: calc(100vh - 64px);
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.mat-toolbar {
+  position: sticky;
+  z-index: 100;
+}
+
+.mat-sidenav-content {
+  padding: 24px;
+}
+
+.menu-item {
+  border-left: 5px solid #ffffff00;
+}
+
+.selected-menu-item {
+  border-left-color: blue;
+  background:rgba(0, 0, 0, 0.05) !important;
+}
+
+.mat-sidenav, .mat-sidenav-content {
+  transition: all 500ms ease-in-out;
+}
