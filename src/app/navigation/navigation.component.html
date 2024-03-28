@@ -17,6 +17,18 @@
     [opened]="(isHandset$ | async) === false"
     [style.width]="sidenavWidth()"
   >
+  <div class="sidenav-header">
+    <img
+      src="https://png.pngtree.com/thumb_back/fh260/background/20230612/pngtree-man-wearing-glasses-is-wearing-colorful-background-image_2905240.jpg"
+      [width]="profilePicSize()"
+      [height]="profilePicSize()"
+      alt="profile picture"
+    />
+    <div class="header-text" [class.hide-header-text]="collapsed()">
+      <h2>Your channel</h2>
+      <p>Lance Soil</p>
+    </div>
+  </div>
     <mat-nav-list>
       <a
         mat-list-item
@@ -34,7 +46,7 @@
           "
           >{{ item.icon }}</mat-icon
         >
-        <span matListItemTitle >{{
+        <span matListItemTitle *ngIf="!collapsed" >{{
           item.label
         }}</span>
       </a>

@@ -69,4 +69,5 @@ export class NavigationComponent {
   collapsed = signal(false);
 
   sidenavWidth = computed(() => this.collapsed() ? '65px' : "250px");
+  profilePicSize = computed(() => this.collapsed() ? '32' : '100');
 }
